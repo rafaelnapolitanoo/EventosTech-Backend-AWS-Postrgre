@@ -1,10 +1,7 @@
 package com.eventostech.api.domain.coupon;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import jdk.jfr.Event;
+import com.eventostech.api.domain.event.Event; // Importando a classe correta
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,8 +17,10 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Coupon {
-
+    @Id
+    @GeneratedValue
     private UUID id;
+
     private Integer discount;
     private String code;
     private Date valid;

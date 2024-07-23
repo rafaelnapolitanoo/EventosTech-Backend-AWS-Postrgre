@@ -1,8 +1,7 @@
 package com.eventostech.api.domain.address;
 
-
+import com.eventostech.api.domain.event.Event; // Importando a classe correta
 import jakarta.persistence.*;
-import jdk.jfr.Event;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,8 +9,8 @@ import lombok.Setter;
 
 import java.util.UUID;
 
-@Table(name = "address")
 @Entity
+@Table(name = "address")
 @Setter
 @Getter
 @AllArgsConstructor
@@ -22,7 +21,6 @@ public class Address {
     private UUID id;
 
     private String city;
-
     private String uf;
 
     @ManyToOne
